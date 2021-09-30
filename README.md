@@ -2,10 +2,8 @@
 
 A docker php 8 image including nginx and supervisor.
 
-## Build
-
-Replace Tag
+## Run
 
 ```
-docker build -t $TAG --no-cache .
+docker run -p 3000:80 hemric/php-nginx-supervisor
 ```

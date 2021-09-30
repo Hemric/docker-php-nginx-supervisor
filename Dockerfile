@@ -12,6 +12,7 @@ RUN apk add --no-cache \
 # https://github.com/mlocati/docker-php-extension-installer
 COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/bin/
 RUN install-php-extensions \
+    bcmath \
     intl \
     pdo_pgsql \
     pgsql \
