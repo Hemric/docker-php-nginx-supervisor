@@ -24,7 +24,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 RUN ln -s $PHP_INI_DIR/php.ini-production $PHP_INI_DIR/php.ini
 
 COPY config/supervisord.conf /etc/supervisor/conf.d/supervisor.d.conf
-COPY config/nginx/default.conf /etc/nginx/conf.d/default.conf
+COPY config/nginx/default.conf /etc/nginx/http.d/default.conf
 COPY --chown=api:api api/index.php /var/www/api/index.php
 
 WORKDIR /var/www/api
